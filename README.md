@@ -1,7 +1,7 @@
 In this repository, I'll solve some challenges in c++
 Every challenge will have it's own h and cpp files
 
-##reverse
+## reverse
 <br>
 (reverse.cpp && reverse.hpp)<br>
 Task<br>
