@@ -3,7 +3,7 @@ Every challenge will have it's own h and cpp files
 
 ## reverse
 <br>
-(reverse.cpp && reverse.hpp)<br>
+reverse.hpp<br>
 Task<br>
 Given a string str, reverse it omitting all non-alphabetic characters.<br>
 

@@ -1,7 +1,15 @@
-#include "stdafx.h"
-#include "reverse.h"
+#ifndef REV_H
+#define REV_H
 
+#include "stdafx.h"
 using namespace std;
+
+class rev{
+public:
+	std::string reverse_letter(const std::string &str);
+};
+
+
 string rev::reverse_letter(const string &str) {
 	string newStr = "";
 	char l = 'a';
@@ -13,3 +21,5 @@ string rev::reverse_letter(const string &str) {
 	}	
 	return newStr;
 }
+
+#endif //PCH_H
