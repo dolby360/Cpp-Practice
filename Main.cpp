@@ -1,10 +1,18 @@
 #include "stdafx.h"
 #include "reverse.hpp"
+#include "Rotate.hpp"
 
 using namespace std;
 
 int main() {
-	rev inst;
-	cout << inst.reverse_letter("ab346764567cd58ef3g");
+	//MaxRotate mr;
+	//long long ans = mr.maxRot(56789);
+	//if (ans == 68597) {
+	//	cout << "YAY" << endl;
+	//}
+	//else {
+	//	cout << ":(" << endl;
+	//}
+	cout << endl << endl << endl << endl << endl << endl;
 	return 0;
 }
