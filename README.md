@@ -40,14 +40,14 @@ Then we add to each obtained digit consecutive digits from the key. For example.
 <br>
 s  c  o  u  t<br>
 19  3 15 21 20<br>
-"+" 
++<br>
 1  9  3  9  1<br>
 ---------------<br>
 20 12 18 30 21<br>
 <br>
 m  a  s  t  e  r  p  i  e  c  e<br>
 13  1 19 20  5 18 16  9  5  3  5<br>
-+  
++  <br>
 1  9  3  9  1  9  3  9  1  9  3<br>
 --------------------------------<br>
 14 10 22 29  6 27 19 18  6  12 8<br>
