@@ -61,3 +61,17 @@ The key input number is a positive integer.<br>
 Example<br>
 Encode("scout",1939);  ==>  [ 20, 12, 18, 30, 21]<br>
 Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
+
+## Like
+### like.hpp<br>
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items.<br> 
+We want to create the text that should be displayed next to such an item.<br>
+
+Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:<br>
+
+likes {} // must be "no one likes this"<br>
+likes {"Peter"} // must be "Peter likes this"<br>
+likes {"Jacob", "Alex"} // must be "Jacob and Alex like this"<br>
+likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"<br>
+likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others like this"<br>
+For 4 or more names, the number in and 2 others simply increases.

@@ -1,12 +1,9 @@
 #include "stdafx.h"
-#include "reverse.hpp"
-#include "cypher.hpp"
+#include "like.hpp"
 
-using namespace std;
 
 int main() {
-	Cypher::EncodeTest();
-	
+	cout << likes({"Alex", "Jacob", "Mark", "Max"});
 	cout << endl << endl << endl;
 	return 0;
 }
