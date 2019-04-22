@@ -2,7 +2,6 @@ In this repository, I'll solve some challenges in c++
 Every challenge will have it's own h and cpp files
 
 ## reverse
-<br>
 ### reverse.hpp<br>
 Task<br>
 Given a string str, reverse it omitting all non-alphabetic characters.<br>
