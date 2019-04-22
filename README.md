@@ -1,4 +1,4 @@
-In this repository, I'll solve some challenges in c++
+In this repository, I'll solve some challenges with c++
 Every challenge will have it's own hpp file
 
 ## reverse
