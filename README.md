@@ -1,5 +1,5 @@
 In this repository, I'll solve some challenges in c++
-Every challenge will have it's own h and cpp files
+Every challenge will have it's own hpp file
 
 ## reverse
 ### reverse.hpp<br>
