@@ -38,17 +38,19 @@ Instead of letters in encrypted word we write the corresponding number, eg. The 
 19  3 15 21 20<br>
 Then we add to each obtained digit consecutive digits from the key. For example. In case of key equal to 1939 :<br>
 <br>
-   s  c  o  u  t<br>
-  19  3 15 21 20<br>
- + 1  9  3  9  1<br>
- ---------------<br>
-  20 12 18 30 21<br>
+s  c  o  u  t<br>
+19  3 15 21 20<br>
+"+" 
+1  9  3  9  1<br>
+---------------<br>
+20 12 18 30 21<br>
 <br>
-   m  a  s  t  e  r  p  i  e  c  e<br>
-  13  1 19 20  5 18 16  9  5  3  5<br>
-+  1  9  3  9  1  9  3  9  1  9  3<br>
-  --------------------------------<br>
-  14 10 22 29  6 27 19 18  6  12 8<br>
+m  a  s  t  e  r  p  i  e  c  e<br>
+13  1 19 20  5 18 16  9  5  3  5<br>
++  
+1  9  3  9  1  9  3  9  1  9  3<br>
+--------------------------------<br>
+14 10 22 29  6 27 19 18  6  12 8<br>
 Task<br>
 Write a function that accepts str string and key number and returns an array of integers representing encoded str.<br>
 <br>
