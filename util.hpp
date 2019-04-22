@@ -1,11 +1,27 @@
 #include "stdafx.h"
 
 //TODO: print other types beside string
+void printVec(vector<int> vec){
+    for(int i = 0; i < vec.size(); i++){
+        cout << vec[i] << " ";
+    }
+    cout << endl;
+}
+
 void printVec(vector<string> vec){
     for(int i = 0; i < vec.size(); i++){
         cout << vec[i] << " ";
     }
     cout << endl;
+}
+
+vector<int> reverseVec(vector<int> vec){
+    vector<int>::iterator it;
+    vector<int> ret;
+    for(it = vec.end() - 1; it != vec.begin() - 1; it--){
+        ret.push_back(*it);
+    }
+    return ret;
 }
 
 vector<string> split(string str,char c){

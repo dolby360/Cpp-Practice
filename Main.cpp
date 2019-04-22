@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	Cypher cy;
+	Cypher::EncodeTest();
 	
 	cout << endl << endl << endl;
 	return 0;
