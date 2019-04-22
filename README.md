@@ -26,6 +26,7 @@ Simple, given a string of words, return the length of the shortest word(s).
 String will never be empty and you do not need to account for different data types.
 
 ## Encode sting
+Cypher.hpp<br>
 Digital Cypher assigns to each letter of the alphabet unique number. For example:<br>
 <br>
  a  b  c  d  e  f  g  h  i  j  k  l  m<br>
