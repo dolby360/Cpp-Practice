@@ -1,6 +1,7 @@
 In this repository, I'll solve some challenges with c++
 Every challenge will have it's own hpp file
 
+# Level 7
 ## reverse
 ### reverse.hpp<br>
 Task<br>
@@ -75,3 +76,24 @@ likes {"Jacob", "Alex"} // must be "Jacob and Alex like this"<br>
 likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"<br>
 likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others like this"<br>
 For 4 or more names, the number in and 2 others simply increases.
+
+# Level 6
+## Braces
+### Braces.hpp
+Write a function that takes a string of braces, and determines if the order of the braces is valid.<br> 
+It should return true if the string is valid, and false if it's invalid.<br>
+<br>
+This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}.<br> 
+Thanks to @arnedag for the idea!<br>
+<br>
+All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.<br>
+<br>
+What is considered Valid?<br>
+A string of braces is considered valid if all braces are matched with the correct brace.<br>
+<br>
+Examples<br>
+"(){}[]"   =>  True<br>
+"([{}])"   =>  True<br>
+"(}"       =>  False<br>
+"[(])"     =>  False<br>
+"[({})](]" =>  False<br>

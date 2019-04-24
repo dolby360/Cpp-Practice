@@ -15,6 +15,13 @@ void printVec(vector<string> vec){
     cout << endl;
 }
 
+void printVec(vector<char> vec){
+    for(int i = 0; i < vec.size(); i++){
+        cout << vec[i] << " ";
+    }
+    cout << endl;
+}
+
 vector<int> reverseVec(vector<int> vec){
     vector<int>::iterator it;
     vector<int> ret;
