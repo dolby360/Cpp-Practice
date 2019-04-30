@@ -31,6 +31,11 @@ vector<int> reverseVec(vector<int> vec){
     return ret;
 }
 
+/*
+str - string to spllit
+c   - split by this character
+return vector<string>
+*/
 vector<string> split(string str,char c){
     vector<string> temp;
     string toPush;

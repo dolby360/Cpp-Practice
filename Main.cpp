@@ -1,8 +1,8 @@
 #include "stdafx.h"
-#include "braces.hpp"
+#include "stat.hpp"
 
 int main() {
-	vBracesTest();
+	Stat::statTest();
 	//cout << endl << endl << endl;
 	return 0;
 }
