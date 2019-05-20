@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "util.hpp"
+#include "../stdafx.h"
+#include "../util.hpp"
 bool valid_braces(string braces);
 
 void vBracesTest(){

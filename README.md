@@ -139,3 +139,22 @@ Remarks:<br>
 if a result in seconds is ab.xy... it will be given truncated as ab.<br>
 <br>
 if the given string is "" you will return ""
+
+## Rainfall
+### rainfall.hpp
+data and data1 are two strings with rainfall records of a few cities for months from January to December. The records of towns are separated by \n. The name of each town is followed by :.<br>
+<br>
+data and towns can be seen in "Your Test Cases:".<br>
+<br>
+Task:<br>
+function: mean(town, strng) should return the average of rainfall for the city town and the strng data or data1 (In R and Julia this function is called avg).<br>
+function: variance(town, strng) should return the variance of rainfall for the city town and the strng data or data1.
+Examples:<br>
+mean("London", data), 51.19(9999999999996) <br>
+variance("London", data), 57.42(833333333374)<br>
+Notes:<br>
+if functions mean or variance have as parameter town a city which has no records return -1 or -1.0 (depending on the language)
+Don't truncate or round: the tests will pass if abs(your_result - test_result) <= 1e-2 or abs((your_result - test_result) / test_result) <= 1e-6 depending on the language.<br>
+Shell tests only variance<br>
+A ref: http://www.mathsisfun.com/data/standard-deviation.html<br>
+data and data1 (can be named d0 and d1 depending on the language; see "Sample Tests:") are adapted from: http://www.worldclimate.com

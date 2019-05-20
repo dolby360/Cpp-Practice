@@ -1,7 +1,7 @@
 #ifndef __ROTATE__
 #define __ROTATE__
 
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "util.hpp"
 /*
 Simple, given a string of words, return the length of the shortest word(s).

@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include <math.h>
-#include "util.hpp"
+#include "../util.hpp"
 #include <algorithm> 
 
 int timeToNumber(string time);

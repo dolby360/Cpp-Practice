@@ -1,7 +1,7 @@
 #ifndef REV_H
 #define REV_H
 
-#include "stdafx.h"
+#include "../stdafx.h"
 using namespace std;
 
 class rev{

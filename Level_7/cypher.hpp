@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "util.hpp"
+#include "../stdafx.h"
+#include "../util.hpp"
 #define ERROR -1
 
 class Cypher{
