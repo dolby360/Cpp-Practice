@@ -104,8 +104,6 @@ Examples<br>
 
 
 
-
-# Level 6
 ## statistics
 ### stat.hpp
 You are the "computer expert" of a local Athletic Association (C.A.A.). Many teams of runners come to compete. <br>
@@ -140,6 +138,7 @@ if a result in seconds is ab.xy... it will be given truncated as ab.<br>
 <br>
 if the given string is "" you will return ""
 
+
 ## Rainfall
 ### rainfall.hpp
 data and data1 are two strings with rainfall records of a few cities for months from January to December. The records of towns are separated by \n. The name of each town is followed by :.<br>
@@ -158,3 +157,8 @@ Don't truncate or round: the tests will pass if abs(your_result - test_result) <
 Shell tests only variance<br>
 A ref: http://www.mathsisfun.com/data/standard-deviation.html<br>
 data and data1 (can be named d0 and d1 depending on the language; see "Sample Tests:") are adapted from: http://www.worldclimate.com
+
+## Find the odd int
+### oddInt.hpp
+Given an array, find the int that appears an odd number of times.<br>
+There will always be only one integer that appears an odd number of times.
