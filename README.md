@@ -81,6 +81,23 @@ likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"<br>
 likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others like this"<br>
 For 4 or more names, the number in and 2 others simply increases.
 
+## Rotate for a Max
+### MaxRotate.hpp<br>
+Let us begin with an example:<br>
+Take a number: 56789. Rotate left, you get 67895.<br>
+Keep the first digit in place and rotate left the other digits: 68957.<br>
+Keep the first two digits in place and rotate the other ones: 68579.<br>
+Keep the first three digits and rotate left the rest: 68597. Now it is over since keeping the first four it remains only one digit which rotated is itself.<br>
+You have the following sequence of numbers:<br>
+56789 -> 67895 -> 68957 -> 68579 -> 68597<br>
+and you must return the greatest: 68957.<br>
+<br>
+Task<br>
+Write function max_rot(n) which given a positive integer n returns the maximum number you got doing rotations similar to the above example.<br>
+So max_rot (or maxRot or ... depending on the language) is such as:<br>
+max_rot(56789) should return 68957<br>
+max_rot(38458215) should return 85821534<br>
+
 # Level 6
 ## Braces
 ### Braces.hpp

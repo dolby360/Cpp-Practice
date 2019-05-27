@@ -8,9 +8,17 @@ void printVec(vector<int> vec){
     cout << endl;
 }
 
+void printVec(vector<long long> vec){
+    for(int i = 0; i < vec.size(); i++){
+        cout << vec[i];
+        cout << endl;
+    }
+    cout << endl;
+}
+
 void printVec(vector<string> vec){
     for(int i = 0; i < vec.size(); i++){
-        cout << vec[i] << " ";
+        cout << vec[i];
         cout << endl;
     }
     cout << endl;
