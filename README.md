@@ -5,6 +5,20 @@ The scale of difficulty is from the higher numbers to the lower.
 such that the easiest is 7.
 And the toughest is 1.
 
+##cmake on windows:
+```bash
+cd build
+cmake -G "Unix Makefiles" ..
+make
+CppPractice
+```
+##another option:
+```bash
+g++ test-main.cpp -c
+g++ test.cpp -c
+g++ test-main.o test.o -o tests && ./tests -r compact
+```
+
 # Level 7
 ## reverse
 ### reverse.hpp<br>
@@ -28,6 +42,21 @@ A string consists of lowercase latin letters, digits and symbols.<br>
 Simple, given a string of words, return the length of the shortest word(s).
 
 String will never be empty and you do not need to account for different data types.
+
+
+## Get the Middle Character
+### get_middle.hpp<br>
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.<br>
+#Examples:<br>
+Kata.getMiddle("test") should return "es"<br>
+Kata.getMiddle("testing") should return "t"<br>
+Kata.getMiddle("middle") should return "dd"<br>
+Kata.getMiddle("A") should return "A"<br>
+#Input<br>
+A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.<br>
+#Output<br>
+The middle character(s) of the word represented as a string.<br>
+
 
 ## Encode sting
 ### Cypher.hpp<br>
