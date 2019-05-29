@@ -5,14 +5,14 @@ The scale of difficulty is from the higher numbers to the lower.
 such that the easiest is 7.
 And the toughest is 1.
 
-##cmake on windows:
+## Cmake on windows:
 ```bash
 cd build
 cmake -G "Unix Makefiles" ..
 make
 CppPractice
 ```
-##another option:
+## Another option:
 ```bash
 g++ test-main.cpp -c
 g++ test.cpp -c
