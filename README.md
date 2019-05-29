@@ -5,7 +5,7 @@ The scale of difficulty is from the higher numbers to the lower.
 such that the easiest is 7.
 And the toughest is 1.
 
-## Cmake on windows:
+## Cmake on Windows:
 ```bash
 cd build
 cmake -G "Unix Makefiles" ..
