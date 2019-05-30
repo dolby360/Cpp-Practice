@@ -5,7 +5,7 @@ The scale of difficulty is from the higher numbers to the lower.
 Such that the easiest is 7.
 And the toughest is 1.
 
-In every level folder (e.g. Level_6 / Level_7) you will see the question described in the readme file.
+In every level folder (e.g. Level_6 / Level_7) you will see the challenges described in the readme file.
 Please check it out. 
 
 
