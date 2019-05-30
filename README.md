@@ -22,6 +22,3 @@ g++ test-main.cpp -c
 g++ test.cpp -c
 g++ test-main.o test.o -o tests && ./tests -r compact
 ```
-
-
-
