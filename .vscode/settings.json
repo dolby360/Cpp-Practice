@@ -80,6 +80,7 @@
         "string_view": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "variant": "cpp"
     }
 }

@@ -78,4 +78,35 @@ data and data1 (can be named d0 and d1 depending on the language; see "Sample Te
 ## Find the odd int
 ### oddInt.hpp
 Given an array, find the int that appears an odd number of times.<br>
-There will always be only one integer that appears an odd number of times.
+There will always be only one integer that appears an odd number of times.<br>
+
+
+## Are they the "same"?<br>
+## theSame.hpp<br>
+Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks whether the two arrays have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.<br>
+<br>
+Examples<br>
+Valid arrays<br>
+a = [121, 144, 19, 161, 19, 144, 19, 11]  <br>
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]<br>
+comp(a, b) returns true because in b 121 is the square of 11, 14641 is the square of 121, 20736 the square of 144, 361 the square of 19, 25921 the square of 161, and so on. It gets obvious if we write b's elements in terms of squares:<br>
+<br>
+a = [121, 144, 19, 161, 19, 144, 19, 11] <br>
+b = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]<br>
+Invalid arrays<br>
+If we change the first number to something else, comp may not return true anymore:<br>
+<br>
+a = [121, 144, 19, 161, 19, 144, 19, 11]  <br>
+b = [132, 14641, 20736, 361, 25921, 361, 20736, 361]<br>
+comp(a,b) returns false because in b 132 is not the square of any number of a.
+<br>
+a = [121, 144, 19, 161, 19, 144, 19, 11]  <br>
+b = [121, 14641, 20736, 36100, 25921, 361, 20736, 361]<br>
+comp(a,b) returns false because in b 36100 is not the square of any number of a.
+<br>
+Remarks<br>
+a or b might be [] (all languages except R, Shell). a or b might be nil or null or None or nothing (except in Haskell, Elixir, C++, Rust, R, Shell, PureScript).<br>
+<br>
+If a or b are nil (or null or None), the problem doesn't make sense so return false.<br>
+If a or b are empty then the result is self-evident.<br>
+a or b are empty or not empty lists.<br>

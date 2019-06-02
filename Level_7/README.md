@@ -105,3 +105,15 @@ Write function max_rot(n) which given a positive integer n returns the maximum n
 So max_rot (or maxRot or ... depending on the language) is such as:<br>
 max_rot(56789) should return 68957<br>
 max_rot(38458215) should return 85821534<br>
+
+
+
+## Parts of a list
+### PartList.hpp<br>
+Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.<br>
+Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
+Each part will be in a string<br>
+Elements of a pair must be in the same order as in the original array.<br>
+Example of return:<br>
+a = {"az", "toto", "picaro", "zone", "kiwi"} --><br>
+{{"az", "toto picaro zone kiwi"}, {"az toto", "picaro zone kiwi"}, {"az toto picaro", "zone kiwi"}, {"az toto picaro zone", "kiwi"}}
