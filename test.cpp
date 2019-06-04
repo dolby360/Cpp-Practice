@@ -3,6 +3,16 @@
 #include "Level_7/PartList.hpp"
 #include "Level_7/get_middle.hpp"
 #include "Level_6/theSame.hpp"
+#include "Level_6/RomanNumerals.hpp"
+
+
+TEST_CASE("Roman Numerals"){
+    REQUIRE(ROMsolution("I") == 1);
+    REQUIRE(ROMsolution("IV") == 4);
+    REQUIRE(ROMsolution("MMVIII") == 2008);
+    REQUIRE(ROMsolution("MDCLXVI") == 1666);
+}
+
 
 
 TEST_CASE("are they the same"){

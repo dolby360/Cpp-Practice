@@ -110,3 +110,28 @@ a or b might be [] (all languages except R, Shell). a or b might be nil or null 
 If a or b are nil (or null or None), the problem doesn't make sense so return false.<br>
 If a or b are empty then the result is self-evident.<br>
 a or b are empty or not empty lists.<br>
+
+
+
+
+
+
+
+## Roman Numerals Decoder<br>
+## RomanNumerals.hpp<br>
+Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.<br>
+Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", uses each letter in descending order.<br>
+<br>
+Example:<br>
+<br>
+solution("XXI"); // => 21<br>
+Help:<br>
+<br>
+Symbol    Value<br>
+I          1<br>
+V          5<br>
+X          10<br>
+L          50<br>
+C          100<br>
+D          500<br>
+M          1,000<br>
