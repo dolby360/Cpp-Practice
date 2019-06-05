@@ -82,7 +82,7 @@ There will always be only one integer that appears an odd number of times.<br>
 
 
 ## Are they the "same"?<br>
-## theSame.hpp<br>
+### theSame.hpp<br>
 Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks whether the two arrays have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.<br>
 <br>
 Examples<br>
@@ -112,13 +112,8 @@ If a or b are empty then the result is self-evident.<br>
 a or b are empty or not empty lists.<br>
 
 
-
-
-
-
-
 ## Roman Numerals Decoder<br>
-## RomanNumerals.hpp<br>
+### RomanNumerals.hpp<br>
 Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.<br>
 Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", uses each letter in descending order.<br>
 <br>
@@ -135,3 +130,37 @@ L          50<br>
 C          100<br>
 D          500<br>
 M          1,000<br>
+
+
+
+## Equal Sides Of An Array<br>
+### FindEvenIndex.hpp<br>
+You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.<br>
+<br>
+For example:<br>
+<br>
+Let's say you are given the array {1,2,3,4,3,2,1}:<br>
+Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.<br>
+<br>
+Let's look at another one.<br>
+You are given the array {1,100,50,-51,1,1}:<br>
+Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index ({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1.<br>
+<br>
+Last one:<br>
+You are given the array {20,10,-80,10,10,15,35}<br>
+At index 0 the left side is {}<br>
+The right side is {10,-80,10,10,15,35}<br>
+They both are equal to 0 when added. (Empty arrays are equal to 0 in this problem)<br>
+Index 0 is the place where the left side and right side are equal.<br>
+<br>
+Note: Please remember that in most programming/scripting languages the index of an array starts at 0.<br>
+<br>
+Input:<br>
+An integer array of length 0 < arr < 1000. The numbers in the array can be any integer positive or negative.<br>
+<br>
+Output:<br>
+The lowest index N where the side to the left of N is equal to the side to the right of N. If you do not find an index that fits these rules, then you will return -1.<br>
+<br>
+Note:<br>
+If you are given an array with multiple answers, return the lowest correct index.<br>
+An empty array should be treated like a 0 in this problem.<br>
