@@ -1,11 +1,66 @@
 #include "include/catch.hpp"
+#include "Level_6/Tribonacci.hpp"
+#include <vector>
+#ifdef DEBUG_ALL
 #include "Level_6/FindEvenIndex.hpp"
 #include "Level_7/PartList.hpp"
 #include "Level_7/get_middle.hpp"
 #include "Level_6/theSame.hpp"
 #include "Level_6/RomanNumerals.hpp"
+#endif
 
 
+TEST_CASE("Tribonacci"){
+    std::vector<int> signature = { 1, 1, 1 };
+    std::vector<int> expected = { 1, 1, 1, 3, 5, 9, 17, 31, 57, 105 };
+    std::vector<int> ret= tribonacci(signature,10);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+    
+    signature = { 0, 0, 1 };
+    expected = { 0,0,1,1,2,4,7,13,24,44 };
+    ret= tribonacci(signature,10);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+
+    signature = { 0, 1, 1 };
+    expected = { 0,1,1,2,4,7,13,24,44,81 };
+    ret= tribonacci(signature,10);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+
+    signature = { 1, 0,  0 };
+    expected = { 1, 0, 0, 1, 1, 2, 4, 7, 13, 24 };
+    ret= tribonacci(signature,10);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+    
+    signature = { 1,2,3 };
+    expected = { 1,2,3,6,11,20,37,68,125,230 };
+    ret= tribonacci(signature,10);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+    
+    signature = { 1,2,3 };
+    expected = { 1,2 };
+    ret= tribonacci(signature,2);
+    REQUIRE( ret.size() == expected.size());
+    for(int i = 0; i <  ret.size(); i++){
+        REQUIRE( ret[i] == expected[i]);
+    }
+}
+
+#ifdef DEBUG_ALL
 TEST_CASE("Equal Sides Of An Array"){
     vector <int> numbers { 1,2,3,4,3,2,1 };
     int res = find_even_index (numbers);
@@ -86,3 +141,4 @@ TEST_CASE("partline_Tests")
         REQUIRE(std::get<1>(ans[i]) == std::get<1>(sol[i]));
     }
 };
+#endif
