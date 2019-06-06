@@ -1,7 +1,10 @@
 #include "include/catch.hpp"
-#include "Level_7/Anagram.hpp"
+#include "Level_5/Chain.hpp"
+#include <iostream>
 #ifdef DEBUG_ALL
 #include <vector>
+#include "Level_6/WhichAreIn.hpp"
+#include "Level_7/Anagram.hpp"
 #include "Level_6/Tribonacci.hpp"
 #include "Level_6/FindEvenIndex.hpp"
 #include "Level_7/PartList.hpp"
@@ -10,8 +13,29 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+TEST_CASE("A Chain adding function"){
+    if(add(1) != 1){
+        std::cout << ":(";
+    }
+    if(add(1)(2) == 3){
+        std::cout << ":(";
+    }
+    if(add(1)(2)(3) == 6){
+        std::cout << ":(";
+    }
+}
 
-TEST_CASE("Tribonacci"){
+
+#ifdef DEBUG_ALL
+TEST_CASE("Which are in?"){
+    std::vector<std::string> arr1 = { "arp", "live", "strong" };
+    std::vector<std::string> arr2 = { "lively", "alive", "harp", "sharp", "armstrong" };
+    std::vector<std::string> sol1 = { "arp", "live", "strong" };
+    std::vector<std::string> ans1 = WhichAreIn::inArray(arr1, arr2);
+    REQUIRE(ans1 == sol1);
+}
+
+TEST_CASE("Is Anagram"){
     REQUIRE( isAnagram("foefet", "toffee")          == true);
     REQUIRE( isAnagram( "Buckethead", "DeathCubeK") == true);
     REQUIRE( isAnagram("Twoo", "WooT")              == true );
@@ -24,8 +48,6 @@ TEST_CASE("Tribonacci"){
     REQUIRE( isAnagram("", "")                      == true);
 }
 
-
-#ifdef DEBUG_ALL
 TEST_CASE("Tribonacci"){
     std::vector<int> signature = { 1, 1, 1 };
     std::vector<int> expected = { 1, 1, 1, 3, 5, 9, 17, 31, 57, 105 };

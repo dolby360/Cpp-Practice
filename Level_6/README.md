@@ -187,3 +187,18 @@ If you enjoyed this kata more advanced and generalized version of it can be foun
 *[Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]*
 
 
+## Which are in?<br>
+### WhichAreIn.hpp<br>
+Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.<br>
+#Example 1: a1 = ["arp", "live", "strong"]<br>
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]<br>
+returns ["arp", "live", "strong"]<br>
+#Example 2: a1 = ["tarp", "mice", "bull"]<br>
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]<br>
+returns []<br>
+<br>
+Notes:<br>
+Arrays are written in "general" notation. See "Your Test Cases" for examples in your language.<br>
+In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.<br>
+Beware: r must be without duplicates.<br>
+Don't mutate the inputs.<br>
