@@ -1,7 +1,8 @@
 #include "include/catch.hpp"
-#include "Level_6/Tribonacci.hpp"
-#include <vector>
+#include "Level_7/Anagram.hpp"
 #ifdef DEBUG_ALL
+#include <vector>
+#include "Level_6/Tribonacci.hpp"
 #include "Level_6/FindEvenIndex.hpp"
 #include "Level_7/PartList.hpp"
 #include "Level_7/get_middle.hpp"
@@ -10,6 +11,21 @@
 #endif
 
 
+TEST_CASE("Tribonacci"){
+    REQUIRE( isAnagram("foefet", "toffee")          == true);
+    REQUIRE( isAnagram( "Buckethead", "DeathCubeK") == true);
+    REQUIRE( isAnagram("Twoo", "WooT")              == true );
+    REQUIRE( isAnagram("dumble", "bumble")          == false);
+    REQUIRE( isAnagram("around", "round")           == false);
+    REQUIRE( isAnagram("ound", "round")             == false);
+    REQUIRE( isAnagram("apple", "pale")             == false);
+    REQUIRE( isAnagram("apple", "appeal")           == false);
+    REQUIRE( isAnagram("apple", "appeal")           == false);
+    REQUIRE( isAnagram("", "")                      == true);
+}
+
+
+#ifdef DEBUG_ALL
 TEST_CASE("Tribonacci"){
     std::vector<int> signature = { 1, 1, 1 };
     std::vector<int> expected = { 1, 1, 1, 3, 5, 9, 17, 31, 57, 105 };
@@ -60,7 +76,7 @@ TEST_CASE("Tribonacci"){
     }
 }
 
-#ifdef DEBUG_ALL
+
 TEST_CASE("Equal Sides Of An Array"){
     vector <int> numbers { 1,2,3,4,3,2,1 };
     int res = find_even_index (numbers);
