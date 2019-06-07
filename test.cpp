@@ -1,7 +1,7 @@
 #include "include/catch.hpp"
-#include "Level_6/unlock.hpp"
-
+#include "Level_7/Printer.hpp"
 #ifdef DEBUG_ALL
+#include "Level_6/unlock.hpp"
 #include "Level_7/Opstrings.hpp"
 #include "Level_5/Chain.hpp"
 #include <iostream>
@@ -16,6 +16,14 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+TEST_CASE("Printer Errors"){
+    std::string s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+    REQUIRE( Printer::printerError(s) == "3/56");
+    s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+    REQUIRE( Printer::printerError(s) == "6/60");
+    s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyzuuuuu";
+    REQUIRE( Printer::printerError(s) == "11/65");
+}
 
 #ifdef DEBUG_ALL
 TEST_CASE("Mr. Safety's treasures"){
