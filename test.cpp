@@ -14,13 +14,16 @@
 #endif
 
 TEST_CASE("A Chain adding function"){
+    /*
+    Can't use the usual framework due to a bug with operators overloading.
+    */
     if(add(1) != 1){
         std::cout << ":(";
     }
-    if(add(1)(2) == 3){
+    if(add(1)(2) != 3){
         std::cout << ":(";
     }
-    if(add(1)(2)(3) == 6){
+    if(add(1)(2)(3) != 6){
         std::cout << ":(";
     }
 }
