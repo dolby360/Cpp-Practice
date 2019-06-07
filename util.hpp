@@ -24,6 +24,7 @@ return vector<string>
 */
 vector<string> split(string str,char c){
     vector<string> temp;
+    temp.reserve(str.size() / 8);
     string toPush;
     if(str[0] == c)           { str.erase(str.begin() ); }
     if(str[str.size()-1] == c){ str.erase(str.end() -1  );  }

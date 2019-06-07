@@ -1,7 +1,9 @@
 #include "include/catch.hpp"
+#include "Level_7/Opstrings.hpp"
+
+#ifdef DEBUG_ALL
 #include "Level_5/Chain.hpp"
 #include <iostream>
-#ifdef DEBUG_ALL
 #include <vector>
 #include "Level_6/WhichAreIn.hpp"
 #include "Level_7/Anagram.hpp"
@@ -13,6 +15,20 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+TEST_CASE("Moves in squared strings (I)"){
+    std::string s = "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu";
+    std::string sol = "QHdgSh\noaMDnH\nXxNNlC\nHxxvRi\nAvVTqb\nuRySvw";
+    std::string res = Opstrings::oper( Opstrings::vertMirror, s );
+    REQUIRE(res == sol);
+    
+
+    s = "lVHt\nJVhv\nCSbg\nyeCt";
+    sol = "yeCt\nCSbg\nJVhv\nlVHt";
+    res = Opstrings::oper( Opstrings::horMirror, s );
+    REQUIRE(res == sol);
+}
+
+#ifdef DEBUG_ALL
 TEST_CASE("A Chain adding function"){
     /*
     Can't use the usual framework due to a bug with operators overloading.
@@ -28,8 +44,6 @@ TEST_CASE("A Chain adding function"){
     }
 }
 
-
-#ifdef DEBUG_ALL
 TEST_CASE("Which are in?"){
     std::vector<std::string> arr1 = { "arp", "live", "strong" };
     std::vector<std::string> arr2 = { "lively", "alive", "harp", "sharp", "armstrong" };
