@@ -1,10 +1,12 @@
 #include "include/catch.hpp"
-#include "Level_7/Printer.hpp"
+#include "Level_5/DirReduction.hpp"
+#include <iostream>
 #ifdef DEBUG_ALL
+#include "Level_7/Printer.hpp"
 #include "Level_6/unlock.hpp"
 #include "Level_7/Opstrings.hpp"
 #include "Level_5/Chain.hpp"
-#include <iostream>
+
 #include <vector>
 #include "Level_6/WhichAreIn.hpp"
 #include "Level_7/Anagram.hpp"
@@ -16,6 +18,20 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+TEST_CASE("Directions Reduction"){
+    std::vector<std::string> d1 = {"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"};
+    std::vector<std::string> ans1 = DirReduction::dirReduc(d1);
+    std::vector<std::string> sol1 = {"WEST"};
+    REQUIRE(ans1 == sol1);
+
+    std::vector<std::string> d2 = {"NORTH","SOUTH","SOUTH","EAST","WEST","NORTH", "NORTH"};
+    std::vector<std::string> ans2 = DirReduction::dirReduc(d2);
+    std::vector<std::string> sol2 = {"NORTH"};
+    REQUIRE(ans2 == sol2);
+}
+
+#ifdef DEBUG_ALL
+
 TEST_CASE("Printer Errors"){
     std::string s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
     REQUIRE( Printer::printerError(s) == "3/56");
@@ -25,7 +41,6 @@ TEST_CASE("Printer Errors"){
     REQUIRE( Printer::printerError(s) == "11/65");
 }
 
-#ifdef DEBUG_ALL
 TEST_CASE("Mr. Safety's treasures"){
     REQUIRE(  unlock("Nokia")      == "66542"      );
     REQUIRE(  unlock("Valut")      == "82588"      );
