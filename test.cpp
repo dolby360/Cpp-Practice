@@ -1,7 +1,8 @@
 #include "include/catch.hpp"
-#include "Level_7/Opstrings.hpp"
+#include "Level_6/unlock.hpp"
 
 #ifdef DEBUG_ALL
+#include "Level_7/Opstrings.hpp"
 #include "Level_5/Chain.hpp"
 #include <iostream>
 #include <vector>
@@ -14,6 +15,16 @@
 #include "Level_6/theSame.hpp"
 #include "Level_6/RomanNumerals.hpp"
 #endif
+
+
+#ifdef DEBUG_ALL
+TEST_CASE("Mr. Safety's treasures"){
+    REQUIRE(  unlock("Nokia")      == "66542"      );
+    REQUIRE(  unlock("Valut")      == "82588"      );
+    REQUIRE(  unlock("toilet")     == "864538"     );
+    REQUIRE(  unlock("waterheater")== "92837432837");
+    REQUIRE(  unlock("birdhouse")  == "247346873"  );
+}
 
 TEST_CASE("Moves in squared strings (I)"){
     std::string s = "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu";
@@ -28,7 +39,6 @@ TEST_CASE("Moves in squared strings (I)"){
     REQUIRE(res == sol);
 }
 
-#ifdef DEBUG_ALL
 TEST_CASE("A Chain adding function"){
     /*
     Can't use the usual framework due to a bug with operators overloading.

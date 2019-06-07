@@ -202,3 +202,19 @@ Arrays are written in "general" notation. See "Your Test Cases" for examples in 
 In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.<br>
 Beware: r must be without duplicates.<br>
 Don't mutate the inputs.<br>
+
+
+## Mr. Safety's treasures<br>
+### unlock.hpp<br>
+Introduction<br>
+Mr. Safety loves numeric locks and his Nokia 3310. He locked almost everything in his house. He is so smart and he doesn't need to remember the combinations. He has an algorithm to generate new passcodes on his Nokia cell phone. <br>
+Task<br>
+Can you crack his numeric locks? Mr. Safety's treasures wait for you. Write an algorithm to open his numeric locks. Can you do it without his Nokia 3310?<br>
+<br>
+Input<br>
+The str input string consists of lowercase and upercase characters. It's a real object that you want to unlock.
+
+Output<br>
+Return a string that only consists of digits.<br>
+Example<br>
+``` unlock("Nokia") // => 66542 unlock("Valut") // => 82588 unlock("toilet") // => 864538 ```
