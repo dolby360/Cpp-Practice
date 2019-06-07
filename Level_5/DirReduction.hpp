@@ -29,7 +29,7 @@ bool oposit(std::string s1,std::string s2){
 VS DirReduction::dirReduc(VS &arr){
     if(arr.size() > 0){
         for(int i = 1; i < arr.size(); i++){
-            if( oposit(arr[i-1],arr[i] ) ){
+            if( opposite(arr[i-1],arr[i] ) ){
                 arr.erase(arr.begin() + (i-1),arr.begin() + i+1);
                 /*Recursively reduce*/
                 dirReduc(arr);
