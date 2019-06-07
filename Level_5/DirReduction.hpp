@@ -10,7 +10,7 @@ public:
     static VS dirReduc(VS &arr);
 };
 
-bool oposit(std::string s1,std::string s2){
+bool opposite(std::string s1,std::string s2){
     if(s1 == "NORTH" && s2 == "SOUTH"){
         return true;
     }
