@@ -1,7 +1,7 @@
 #include "include/catch.hpp"
-#include "Level_6/LongestConsec.hpp"
-
+#include "Level_6/tickets.hpp"
 #ifdef DEBUG_ALL
+#include "Level_6/LongestConsec.hpp"
 #include "Level_5/DirReduction.hpp"
 #include <iostream>
 #include <string>
@@ -9,7 +9,6 @@
 #include "Level_6/unlock.hpp"
 #include "Level_7/Opstrings.hpp"
 #include "Level_5/Chain.hpp"
-
 #include <vector>
 #include "Level_6/WhichAreIn.hpp"
 #include "Level_7/Anagram.hpp"
@@ -21,6 +20,23 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+
+TEST_CASE("Consecutive strings"){    
+    REQUIRE(
+        tickets( {25, 25, 50, 50} ) == "YES"
+    );
+    REQUIRE(
+        tickets( {25, 100} ) == "NO"
+    );
+    REQUIRE(
+        tickets( {25,25,50,50,25,25,25,25,50,50} ) == "YES"
+    );
+    REQUIRE(
+        tickets( {50 ,25, 25, 25, 25 } ) == "NO"
+    );
+}
+
+#ifdef DEBUG_ALL
 TEST_CASE("Consecutive strings"){    
     std::vector<std::string> arr = {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"};
     std::string res = LongestConsec::longestConsec(arr, 2);
@@ -30,7 +46,6 @@ TEST_CASE("Consecutive strings"){
     REQUIRE(res == "oocccffuucccjjjkkkjyyyeehh");
 }
 
-#ifdef DEBUG_ALL
 TEST_CASE("Directions Reduction"){
     std::vector<std::string> d1 = {"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"};
     std::vector<std::string> ans1 = DirReduction::dirReduc(d1);
