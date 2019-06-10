@@ -1,7 +1,10 @@
 #include "include/catch.hpp"
+#include "Level_6/LongestConsec.hpp"
+
+#ifdef DEBUG_ALL
 #include "Level_5/DirReduction.hpp"
 #include <iostream>
-#ifdef DEBUG_ALL
+#include <string>
 #include "Level_7/Printer.hpp"
 #include "Level_6/unlock.hpp"
 #include "Level_7/Opstrings.hpp"
@@ -18,6 +21,16 @@
 #include "Level_6/RomanNumerals.hpp"
 #endif
 
+TEST_CASE("Consecutive strings"){    
+    std::vector<std::string> arr = {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"};
+    std::string res = LongestConsec::longestConsec(arr, 2);
+    REQUIRE( res == "abigailtheta");
+    arr = {"ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"};
+    res = LongestConsec::longestConsec(arr,1);
+    REQUIRE(res == "oocccffuucccjjjkkkjyyyeehh");
+}
+
+#ifdef DEBUG_ALL
 TEST_CASE("Directions Reduction"){
     std::vector<std::string> d1 = {"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"};
     std::vector<std::string> ans1 = DirReduction::dirReduc(d1);
@@ -30,7 +43,6 @@ TEST_CASE("Directions Reduction"){
     REQUIRE(ans2 == sol2);
 }
 
-#ifdef DEBUG_ALL
 
 TEST_CASE("Printer Errors"){
     std::string s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";

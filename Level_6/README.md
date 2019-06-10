@@ -218,3 +218,17 @@ Output<br>
 Return a string that only consists of digits.<br>
 Example<br>
 ``` unlock("Nokia") // => 66542 unlock("Valut") // => 82588 unlock("toilet") // => 864538 ```
+
+
+
+## Consecutive strings<br>
+### LongestConsec.hpp<br>
+You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.<br>
+<br>
+Example:<br>
+longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"<br>
+<br>
+n being the length of the string array, if n = 0 or k > n or k <= 0 return "".<br>
+<br>
+Note<br>
+consecutive strings : follow one after another without an interruption<br>
