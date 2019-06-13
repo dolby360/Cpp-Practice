@@ -248,3 +248,17 @@ Examples:<br>
 tickets({25, 25, 50}) // => YES <br>
 tickets({25, 100}) // => NO. Vasya will not have enough money to give change to 100 dollars<br>
 tickets({25, 25, 50, 50, 100}) // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)<br>
+
+
+
+
+## Find the missing letter<br>
+### findMissingLetter.hpp<br>
+Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.<br>
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+The array will always contain letters in only one case.
+<br>
+Example:<br>
+['a','b','c','d','f'] -> 'e'<br>
+['O','Q','R','S'] -> 'P'<br>
+(Use the English alphabet with 26 letters!)<br>

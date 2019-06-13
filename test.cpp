@@ -1,6 +1,7 @@
 #include "include/catch.hpp"
-#include "Level_6/tickets.hpp"
+#include "Level_6/findMissingLetter.hpp"
 #ifdef DEBUG_ALL
+#include "Level_6/tickets.hpp"
 #include "Level_6/LongestConsec.hpp"
 #include "Level_5/DirReduction.hpp"
 #include <iostream>
@@ -22,6 +23,20 @@
 
 
 TEST_CASE("Consecutive strings"){    
+    char arr1[] = { 'a','b','c','d','f' };
+    char arr2[] = { 'O','Q','R','S' };
+    REQUIRE(
+        findMissingLetter(arr1, 5) == 'e'
+    );
+    REQUIRE(
+        findMissingLetter(arr2, 4) == 'P'
+    );
+}
+
+
+#ifdef DEBUG_ALL
+
+TEST_CASE("Consecutive strings"){    
     REQUIRE(
         tickets( {25, 25, 50, 50} ) == "YES"
     );
@@ -36,7 +51,6 @@ TEST_CASE("Consecutive strings"){
     );
 }
 
-#ifdef DEBUG_ALL
 TEST_CASE("Consecutive strings"){    
     std::vector<std::string> arr = {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"};
     std::string res = LongestConsec::longestConsec(arr, 2);
